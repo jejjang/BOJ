@@ -19,13 +19,9 @@ public class test_4949 {
 			for (String str : array) {
 				if (str.equals("(") || str.equals("[")) { // 왼쪽 소괄호, 왼쪽 대괄호가 있으면 stack에 push
 					stack.push(str);
-				} else if (str.equals(")") && !stack.isEmpty() && stack.peek().equals("(")) { // 오른쪽 소괄호가 있고 stack이 비어있지
-																								// 않고 stack의 가장 위에 있는
-																								// 항목이 왼쪽 소괄호이면 pop
+				} else if (str.equals(")") && !stack.isEmpty() && stack.peek().equals("(")) { // 오른쪽 소괄호가 있고 stack이 비어있지 않고 stack의 가장 위에 있는 항목이 왼쪽 소괄호이면 pop
 					stack.pop();
-				} else if (str.equals("]") && !stack.isEmpty() && stack.peek().equals("[")) { // 오른쪽 대괄호가 있고 stack이 비어있지
-																								// 않고 stack의 가장 위에 있는
-																								// 항목이 왼쪽 대괄호이면 pop
+				} else if (str.equals("]") && !stack.isEmpty() && stack.peek().equals("[")) { // 오른쪽 대괄호가 있고 stack이 비어있지 않고 stack의 가장 위에 있는 항목이 왼쪽 대괄호이면 pop
 					stack.pop();
 				} else if (str.equals(")") || str.equals("]")) // 오른쪽 소괄호, 오른쪽 대괄호만 있을 경우에는 stack에 push
 					stack.push(str);
