@@ -1,6 +1,7 @@
 import java.util.*;
 
-//¹éÁØ 10546 - ¹èºÎ¸¥ ¸¶¶óÅä³Ê
+//ë°±ì¤€ 10546 - ë°°ë¶€ë¥¸ ë§ˆë¼í† ë„ˆ
+// ê²°ê³¼ê°’ì€ ë‚˜ì˜¤ë‚˜ ì‹œê°„ì´ˆê³¼ ëœ¸
 
 public class test_10546 {
 	public static void main(String[] args) {
@@ -11,12 +12,12 @@ public class test_10546 {
 		if (N < 1 || N > 100000)
 			return;
 
-		Map<String, Integer> hashMap = new HashMap<String, Integer>(); // ÇØ½Ã¸Ê »ı¼º
+		Map<String, Integer> hashMap = new HashMap<String, Integer>(); // í•´ì‹œë§µ ìƒì„±
 
-		for (int i = 0; i < N; i++) { // Âü°¡ÀÚÀÇ ÀÌ¸§
+		for (int i = 0; i < N; i++) { // ì°¸ê°€ìì˜ ì´ë¦„
 			String name = sc.next();
 
-			if (name.length() < 1 || name.length() > 20) // ÀÌ¸§ ±æÀÌ Á¦ÇÑ
+			if (name.length() < 1 || name.length() > 20) // ì´ë¦„ ê¸¸ì´ ì œí•œ
 				return;
 
 			if (hashMap.containsKey(name)) {
@@ -27,7 +28,7 @@ public class test_10546 {
 			}
 		}
 
-		for (int i = 0; i < N - 1; i++) { // ¿ÏÁÖÇÑ Âü°¡ÀÚÀÇ ÀÌ¸§, ¾ê´Â value °ªÀÌ 1ÀÎ ¾Ö°¡ Á¤´ä
+		for (int i = 0; i < N - 1; i++) { // ì™„ì£¼í•œ ì°¸ê°€ìì˜ ì´ë¦„, ì–˜ëŠ” value ê°’ì´ 1ì¸ ì• ê°€ ì •ë‹µ
 			String name = sc.next();
 
 			if (name.length() < 1 || name.length() > 20)
@@ -41,8 +42,8 @@ public class test_10546 {
 			}
 		}
 
-		for (String mapkey : hashMap.keySet()) { // ¿ÏÁÖÇÏÁö ¸øÇÑ Âü°¡ÀÚÀÇ ÀÌ¸§ Ãâ·Â
-			System.out.println(mapkey.toLowerCase()); // ´ë¹®ÀÚ°¡ µé¾î¿Ã °æ¿ì ¼Ò¹®ÀÚ·Î º¯°æÇÏ¿© Ãâ·Â
+		for (String mapkey : hashMap.keySet()) { // ì™„ì£¼í•˜ì§€ ëª»í•œ ì°¸ê°€ìì˜ ì´ë¦„ ì¶œë ¥
+			System.out.println(mapkey.toLowerCase()); // ëŒ€ë¬¸ìê°€ ë“¤ì–´ì˜¬ ê²½ìš° ì†Œë¬¸ìë¡œ ë³€ê²½í•˜ì—¬ ì¶œë ¥
 		}
 	}
 }
